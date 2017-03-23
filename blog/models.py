@@ -17,3 +17,8 @@ class Post(models.Model):
 
     def __str__(self):
         return self.title
+
+class Comments(models.Model):
+
+    comments_text = models.TextField()
+    comments_Post = models.ForeignKey(Post)
